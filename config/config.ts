@@ -6,7 +6,7 @@ export class Config {
 
     static readonly BASE_URL = process.env.BASE_URL!;
 
-    static readonly USERNAME = process.env.USERNAME!;
+    static readonly STANDARD_USER = process.env.STANDARD_USER!;
 
     static readonly PASSWORD = process.env.PASSWORD!;
 

@@ -11,7 +11,7 @@ type LoginFixture = {
 export const test = base.extend<LoginFixture>({
     LoggedInPage: async ({ page, loginPage }, use) => {
         await page.goto('/');
-        await loginPage.login(Config.USERNAME, Config.PASSWORD);
+        await loginPage.login(Config.STANDARD_USER, Config.PASSWORD);
         await loginPage.verifyLoginSuccess();
         await use(page);
     }

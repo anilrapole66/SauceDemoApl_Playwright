@@ -10,7 +10,10 @@
     "debug": "playwright test --debug",
     "codegen": "npx playwright codegen",
     "test:report": "npx playwright show-report",
-    "allure:serve": "allure serve allure-results"
+    "allure:generate": "allure generate allure-results --clean",
+    "allure:open": "allure open allure-report",
+    "allure:serve": "allure serve allure-results",
+    "clean:allure": "rimraf allure-results allure-report"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +23,7 @@
     "@playwright/test": "^1.61.1",
     "@types/node": "^26.1.1",
     "allure-playwright": "^3.10.2",
+    "rimraf": "^6.1.3",
     "ts-node": "^10.9.2",
     "typescript": "^7.0.2"
   },

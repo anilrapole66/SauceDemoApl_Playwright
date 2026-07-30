@@ -20,6 +20,6 @@ export class LoginPage extends BasePage {
   }
 
   async verifyLoginSuccess() {
-    await this.page.waitForSelector(".inventory_list");
+    await this.page.waitForURL('**/inventory.html', { timeout: 5000 });
   }
 }
