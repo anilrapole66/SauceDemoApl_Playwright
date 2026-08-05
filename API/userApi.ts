@@ -7,11 +7,11 @@ export class UserApi {
 
     async getUser(id: number) {
 
-        return await this.request.get(
+        const base = Config.API_BASE_URL ? Config.API_BASE_URL.replace(/\/+$/g, "") : "";
+        const endpoint = `/users/${id}`;
+        const url = base ? `${base}${endpoint}` : endpoint;
 
-            `${Config.API_BASE_URL}/users/${id}`
-
-        );
+        return await this.request.get(url);
 
     }
 
